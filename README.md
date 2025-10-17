@@ -73,28 +73,6 @@ echo " World" | powershell -File safe_ops.ps1 write "notes/test.txt" append
 powershell -File safe_ops.ps1 delete "notes/test.txt"
 ```
 
----
-
-## 📱 iPhone側セットアップ（ショートカット）
-
-### 🟦 Send Code to PC
-1. 新規ショートカット作成 → 共有シートON（種類: テキスト）  
-2. 「テキストを取得」→ 変数 `CODE`  
-3. 「質問」→ “保存するパスを入力” → 変数 `PATH`  
-4. 「メニューから選択」→ `overwrite / append` → 変数 `MODE`  
-5. 「スクリプトを実行（SSH経由）」を追加  
-   - サーバー: `192.168.1.23`  
-   - ユーザー: Windowsログイン名  
-   - 認証: パスワード or 鍵  
-   - コマンド:
-     ```
-     powershell -ExecutionPolicy Bypass -File "C:\code_drop\safe_ops.ps1" write "${PATH}" "${MODE}" -Backup
-     ```
-   - スクリプトの入力: `CODE`
-6. 結果通知を追加（任意）
-
----
-
 ## 🧪 動作例
 1. ChatGPTでコード生成  
 2. 「共有」→「Send Code to PC」  
