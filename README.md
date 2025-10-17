@@ -116,3 +116,5 @@ MIT License © 2025 CodeBeam Project
 ---
 
 **Beam your code. Instantly. Safely. Locally.**
+
+🎩 CommitPilot smoke test line.
